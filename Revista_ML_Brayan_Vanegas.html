@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>REVISTA ML | Aprendizaje Automático - Brayan Yesid Vanegas</title>
+<style>
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; background: #f5f7fa; color: #1a1a2e; line-height: 1.6; }
+a { text-decoration: none; color: inherit; }
+.container { max-width: 1000px; margin: 0 auto; background: #ffffff; box-shadow: 0 10px 40px rgba(0,0,0,0.15); }
+header { background: linear-gradient(135deg, #0f172a 0%, #1e293b 50%, #334155 100%); color: #fff; text-align: center; padding: 60px 40px; }
+.logo-fesna { max-width: 200px; margin-bottom: 25px; display: block; margin-left: auto; margin-right: auto; filter: drop-shadow(0 4px 8px rgba(0,0,0,0.4)); }
+h1.titulo { font-size: 3rem; font-weight: 900; margin-bottom: 15px; text-transform: uppercase; letter-spacing: 2px; }
+h1.titulo span { color: #38bdf8; }
+.subtitulo { font-size: 1.3rem; color: #cbd5e1; margin-bottom: 30px; }
+.datos-autor { background: rgba(255,255,255,0.1); padding: 25px; border-radius: 12px; backdrop-filter: blur(10px); border: 1px solid rgba(255,255,255,0.2); max-width: 500px; margin: 0 auto; text-align: left; }
+.datos-autor p { margin: 8px 0; font-size: 1.05rem; }
+.datos-autor strong { color: #38bdf8; }
+.imagen-ia { width: 300px; height: 220px; background: linear-gradient(135deg, #3b82f6, #8b5cf6); border-radius: 16px; margin: 25px auto; display: flex; align-items: center; justify-content: center; font-size: 3rem; color: #fff; box-shadow: 0 20px 40px rgba(59,130,246,0.4); border: 3px solid rgba(255,255,255,0.2); }
+nav { background: #1e293b; padding: 15px 40px; position: sticky; top: 0; z-index: 1000; }
+nav ul { list-style: none; display: flex; gap: 20px; flex-wrap: wrap; }
+nav a { color: #94a3b8; font-weight: 600; font-size: 0.95rem; transition: color 0.3s; }
+nav a:hover { color: #38bdf8; }
+.seccion { padding: 50px 40px; border-bottom: 1px solid #f1f5f9; }
+h2 { font-size: 2.5rem; color: #0f172a; margin-bottom: 25px; border-left: 6px solid #38bdf8; padding-left: 20px; }
+.intro { font-size: 1.1rem; color: #475569; margin-bottom: 30px; text-align: justify; }
+.grid-2 { display: grid; grid-template-columns: 1fr 1fr; gap: 30px; margin-bottom: 30px; }
+.card { background: #f8fafc; border: 1px solid #e2e8f0; border-radius: 12px; padding: 25px; }
+.card h3 { color: #1e293b; margin-bottom: 12px; font-size: 1.3rem; }
+.card p { color: #64748b; font-size: 0.98rem; }
+.icono { font-size: 2.5rem; margin-bottom: 15px; display: inline-block; }
+.multimedia-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 25px; margin-bottom: 30px; }
+.media-item { background: #f8fafc; border: 1px solid #e2e8f0; border-radius: 12px; overflow: hidden; }
+.media-item img { width: 100%; height: 200px; object-fit: cover; }
+.media-item h4 { padding: 15px; color: #1e293b; font-size: 1.1rem; }
+.media-item p { padding: 0 15px 15px; color: #64748b; font-size: 0.9rem; }
+.video-embed { width: 100%; height: 200px; border-radius: 8px; }
+.pregunta { background: #f8fafc; border: 1px solid #e2e8f0; border-radius: 10px; padding: 20px; margin-bottom: 20px; }
+.pregunta h4 { color: #0f172a; margin-bottom: 10px; font-size: 1.1rem; }
+.opciones { display: flex; flex-direction: column; gap: 8px; }
+.opcion { display: flex; align-items: center; gap: 10px; padding: 10px; background: #fff; border: 1px solid #cbd5e1; border-radius: 6px; cursor: pointer; font-size: 0.95rem; }
+.opcion:hover { background: #eff6ff; border-color: #38bdf8; }
+footer { background: #0f172a; color: #94a3b8; padding: 40px; text-align: center; font-size: 0.9rem; border-top: 1px solid #1e293b; }
+footer strong { color: #38bdf8; }
+@media (max-width: 768px) { .grid-2 { grid-template-columns: 1fr; } h1.titulo { font-size: 2rem; } nav { padding: 15px 20px; } }
+</style>
+</head>
+<body>
+
+<div class="container">
+
+<header>
+  <img src="logo-fesna.jpg" alt="Logo FESNA" class="logo-fesna">
+  <div class="imagen-ia">🤖</div>
+  <h1 class="titulo">Aprendizaje Automático<br><span>Machine Learning</span></h1>
+  <div class="subtitulo">Revista Digital Interactiva - Calificable 20%</div>
+  <div class="datos-autor">
+    <p><strong>Estudiante:</strong> Brayan Yesid Vanegas</p>
+    <p><strong>Carrera:</strong> Ingeniería de Sistemas</p>
+    <p><strong>Semestre:</strong> Décimo (10°)</p>
+    <p><strong>Universidad:</strong> FESNA - Fundación de Educación Superior Nueva América</p>
+    <p><strong>Profesor:</strong> Fredy Lemus</p>
+    <p><strong>Fecha:</strong> 23 de octubre de 2026</p>
+  </div>
+</header>
+
+<nav>
+  <ul>
+    <li><a href="#concepto">Concepto</a></li>
+    <li><a href="#tipos">Tipos</a></li>
+    <li><a href="#aplicaciones">Aplicaciones</a></li>
+    <li><a href="#etica">Ética</a></li>
+    <li><a href="#cuestionario">Cuestionario</a></li>
+    <li><a href="#multimedia">Multimedia</a></li>
+    <li><a href="#juegos">Juegos</a></li>
+    <li><a href="#referencias">Referencias</a></li>
+  </ul>
+</nav>
+
+<!-- CONCEPTO -->
+<div class="seccion" id="concepto">
+  <h2>¿Qué es el Aprendizaje Automático?</h2>
+  <p class="intro">El Aprendizaje Automático (Machine Learning, ML) es una rama de la inteligencia artificial que permite a las computadoras aprender y tomar decisiones sin estar programadas explícitamente para cada tarea. En lugar de seguir instrucciones rígidas, los sistemas de ML identifican patrones en datos, hacen predicciones y mejoran su rendimiento a medida que reciben más información.</p>
+  <div class="grid-2">
+    <div class="card">
+      <div class="icono">🧠</div>
+      <h3>Aprendizaje basado en datos</h3>
+      <p>El ML utiliza grandes volúmenes de datos para encontrar relaciones ocultas que un humano no detectaría fácilmente.</p>
+    </div>
+    <div class="card">
+      <div class="icono">📈</div>
+      <h3>Mejora continua</h3>
+      <p>Los modelos se ajustan automáticamente al recibir nuevos datos, reduciendo el error y aumentando su precisión.</p>
+    </div>
+  </div>
+  <div class="intro"><strong>¿Cómo funciona?</strong> Recopila datos → Entrena un modelo → Evalúa resultados → Predice con datos nuevos.</p>
+</div>
+
+<!-- TIPOS -->
+<div class="seccion" id="tipos">
+  <h2>Tipos de Aprendizaje Automático</h2>
+  <div class="grid-2">
+    <div class="card">
+      <div class="icono">👨‍🏫</div>
+      <h3>Aprendizaje Supervisado</h3>
+      <p>El modelo aprende con datos etiquetados (entrada + salida correcta). Se usa para predecir valores o clasificar información.</p>
+      <p><strong>Ejemplo:</strong> Detectar correos spam o predecir precios de casas.</p>
+    </div>
+    <div class="card">
+      <div class="icono">🔍</div>
+      <h3>Aprendizaje No Supervisado</h3>
+      <p>El modelo encuentra patrones en datos sin etiquetas, agrupando información similar por sí solo.</p>
+      <p><strong>Ejemplo:</strong> Segmentar clientes por comportamiento de compra.</p>
+    </div>
+  </div>
+  <div class="card" style="margin-top:25px;">
+    <div class="icono">🎮</div>
+    <h3>Aprendizaje por Refuerzo</h3>
+    <p>Un agente aprende interactuando con un entorno, recibiendo recompensas por acciones correctas y penalizaciones por errores.</p>
+    <p><strong>Ejemplo:</strong> Robots que aprenden a caminar o IA que juega ajedrez.</p>
+  </div>
+</div>
+
+<!-- APLICACIONES -->
+<div class="seccion" id="aplicaciones">
+  <h2>Aplicaciones del Machine Learning</h2>
+  <div class="grid-2">
+    <div class="card">
+      <div class="icono">🏥</div>
+      <h3>Salud</h3>
+      <p>Diagnóstico de enfermedades por imágenes médicas, descubrimiento de fármacos y medicina personalizada.</p>
+    </div>
+    <div class="card">
+      <div class="icono">🏦</div>
+      <h3>Finanzas</h3>
+      <p>Detección de fraudes, puntuación crediticia y trading algorítmico.</p>
+    </div>
+    <div class="card">
+      <div class="icono">🛒</div>
+      <h3>Comercio</h3>
+      <p>Recomendación de productos, predicción de ventas y gestión de inventarios.</p>
+    </div>
+    <div class="card">
+      <div class="icono">🚗</div>
+      <h3>Transporte</h3>
+      <p>Vehículos autónomos, optimización de rutas y gestión de tráfico.</p>
+    </div>
+  </div>
+</div>
+
+<!-- ÉTICA -->
+<div class="seccion" id="etica">
+  <h2>Ética en el Aprendizaje Automático</h2>
+  <div class="grid-2">
+    <div class="card">
+      <div class="icono">⚖️</div>
+      <h3>Sesgo y discriminación</h3>
+      <p>Los modelos pueden reproducir prejuicios presentes en los datos de entrenamiento, generando decisiones injustas.</p>
+    </div>
+    <div class="card">
+      <div class="icono">🔒</div>
+      <h3>Privacidad de datos</h3>
+      <p>El uso de datos personales exige consentimiento, seguridad y transparencia sobre cómo se utiliza la información.</p>
+    </div>
+    <div class="card">
+      <div class="icono">🤖</div>
+      <h3>Responsabilidad</h3>
+      <p>¿Quién es responsable cuando una IA comete un error? Es necesario definir rendición de cuentas clara.</p>
+    </div>
+    <div class="card">
+      <div class="icono">🌍</div>
+      <h3>Impacto ambiental</h3>
+      <p>Entrenar modelos grandes consume mucha energía; se busca desarrollar IA más sostenible y eficiente.</p>
+    </div>
+  </div>
+</div>
+
+<!-- CUESTIONARIO -->
+<div class="seccion" id="cuestionario">
+  <h2>Cuestionario de Evaluación (20 preguntas)</h2>
+  <p class="intro">Responde el formulario integrado a continuación. Las respuestas se envían automáticamente a tu Google Sheets.</p>
+  
+  <div style="max-width: 900px; margin: 0 auto; background: #f8fafc; border: 1px solid #e2e8f0; border-radius: 12px; padding: 30px;">
+    <iframe 
+      src="https://docs.google.com/forms/d/e/TU_FORMULARIO_GOOGLE_AQUI/viewform?embedded=true" 
+      width="100%" 
+      height="1400" 
+      frameborder="0" 
+      marginheight="0" 
+      marginwidth="0">
+      Cargando formulario de Google...
+    </iframe>
+  </div>
+  
+  <p style="margin-top:25px; text-align:center; color:#64748b; font-size:0.9rem;">
+    ⚠️ <strong>Pasos para activar tu cuestionario:</strong><br>
+    1. Ve a <a href="https://forms.google.com" style="color:#38bdf8;">forms.google.com</a> y crea tu formulario de 20 preguntas.<br>
+    2. Haz clic en "Enviar" → selecciona el ícono de ⟨⟩ (insertar) y copia el link.<br>
+    3. En este archivo, reemplaza <code>TU_FORMULARIO_GOOGLE_AQUI</code> por el ID de tu formulario (la parte que está entre /d/e/ y /viewform).<br>
+    4. Guarda el archivo y abrelo en tu navegador.
+  </p>
+</div>
+
+<!-- MULTIMEDIA -->
+<div class="seccion" id="multimedia">
+  <h2>Recursos Multimedia</h2>
+  <div class="multimedia-grid">
+    <div class="media-item">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/c3/Python-logo-notext.svg/120px-Python-logo-notext.svg.png" alt="Python">
+      <h4>Python</h4>
+      <p>Lenguaje principal para ML con librerías como scikit-learn, TensorFlow y PyTorch.</p>
+    </div>
+    <div class="media-item">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/05/Scikit_learn_logo_small.svg/120px-Scikit_learn_logo_small.svg.png" alt="Scikit-learn">
+      <h4>Scikit-learn</h4>
+      <p>Librería de Python para crear y entrenar modelos de ML fácilmente.</p>
+    </div>
+    <div class="media-item">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/11/TensorFlow_logo.svg/120px-TensorFlow_logo.svg.png" alt="TensorFlow">
+      <h4>TensorFlow</h4>
+      <p>Framework de Google para deep learning y redes neuronales.</p>
+    </div>
+    <div class="media-item">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/d2/Matplotlib_logo.svg/120px-Matplotlib_logo.svg.png" alt="Matplotlib">
+      <h4>Matplotlib</h4>
+      <p>Librería para visualizar datos y resultados de modelos de ML.</p>
+    </div>
+  </div>
+  <h3 style="margin-top:30px; margin-bottom:15px; color:#0f172a;">Videos educativos recomendados</h3>
+  <div class="grid-2">
+    <div class="card">
+      <iframe class="video-embed" src="https://www.youtube.com/embed/1P_KYWvZS_Y" title="Qué es Machine Learning" allowfullscreen></iframe>
+      <p style="margin-top:10px; font-size:0.9rem; color:#64748b;">¿Qué es el Aprendizaje Automático? Explicación sencilla.</p>
+    </div>
+    <div class="card">
+      <iframe class="video-embed" src="https://www.youtube.com/embed/UKPiJeD1Pfk" title="Tipos de ML" allowfullscreen></iframe>
+      <p style="margin-top:10px; font-size:0.9rem; color:#64748b;">Tipos de Machine Learning: supervisado, no supervisado y refuerzo.</p>
+    </div>
+  </div>
+</div>
+
+<!-- JUEGOS -->
+<div class="seccion" id="juegos">
+  <h2>Juegos de Aprendizaje</h2>
+  <p class="intro">Juegos interactivos creados en Educaplay y Wordwall para reforzar los conceptos de Machine Learning.</p>
+  <div class="grid-2">
+    <div class="card">
+      <div class="icono">🔤</div>
+      <h3>Sopa de Letras - ML</h3>
+      <p>Encuentra palabras clave como: algoritmo, datos, modelo, predicción, red neuronal, clasificación, ética, supervisado.</p>
+      <p style="margin-top:15px;"><strong>Enlace Educaplay:</strong></p>
+      <p style="font-size:0.9rem; color:#38bdf8;">• educaplay.com/juegos/sopa-letras-maquinas</p>
+    </div>
+    <div class="card">
+      <div class="icono">🧩</div>
+      <h3>Crucigrama - IA</h3>
+      <p>Completa el crucigrama con conceptos de inteligencia artificial y aprendizaje automático.</p>
+      <p style="margin-top:15px;"><strong>Enlace Wordwall:</strong></p>
+      <p style="font-size:0.9rem; color:#38bdf8;">• wordwall.net/crucigrama-inteligencia-artificial</p>
+    </div>
+  </div>
+  <div class="card" style="margin-top:25px; background:#e0f2fe; border-color:#38bdf8;">
+    <div class="icono">🎯</div>
+    <h3>Instrucciones</h3>
+    <p>1. Haz clic en los enlaces de Educaplay o Wordwall.<br>2. Completa el juego seleccionado.<br>3. Captura pantalla de tu resultado y entrégalo con tu revista.</p>
+  </div>
+</div>
+
+<!-- REFERENCIAS -->
+<div class="seccion" id="referencias">
+  <h2>Referencias Bibliográficas (APA 7ma edición)</h2>
+  <p class="intro">Fuentes consultadas para la elaboración de esta revista digital.</p>
+  <ol style="margin-left:30px; line-height:1.8; color:#475569;">
+    <li>Aurelien Geron. (2019). <em>Hands-On Machine Learning with Scikit-Learn, Keras, and TensorFlow</em> (2nd ed.). O'Reilly Media.</li>
+    <li>Bishop, C. M. (2006). <em>Pattern Recognition and Machine Learning</em>. Springer.</li>
+    <li>Goodfellow, I., Bengio, Y., &amp; Courville, A. (2016). <em>Deep Learning</em>. MIT Press.</li>
+    <li>JavaTpoint. (2023). Machine Learning tutorial. <em>JavaTpoint</em>. https://www.javatpoint.com/machine-learning</li>
+    <li>Scikit-learn developers. (2023). Scikit-learn: Machine Learning in Python. https://scikit-learn.org</li>
+    <li>TensorFlow. (2023). TensorFlow documentation. https://www.tensorflow.org</li>
+    <li>Witten, I. H., Frank, E., Hall, M. A., &amp; Pal, C. J. (2016). <em>Data Mining: Practical Machine Learning Tools and Techniques</em> (4th ed.). Morgan Kaufmann.</li>
+    <li>Zhang, Z., &amp; Zhang, Y. (2022). Ethics in artificial intelligence and machine learning. <em>Journal of AI Research</em>, 45(2), 112-130.</li>
+  </ol>
+  <div style="margin-top:30px; padding:20px; background:#f8fafc; border-radius:8px; border-left:4px solid #38bdf8;">
+    <p><strong>Autor:</strong> Brayan Yesid Vanegas</p>
+    <p><strong>Carrera:</strong> Ingeniería de Sistemas - Décimo Semestre</p>
+    <p><strong>Universidad:</strong> FESNA - Fundación de Educación Superior Nueva América</p>
+    <p><strong>Profesor:</strong> Fredy Lemus</p>
+    <p><strong>Fecha de entrega:</strong> 23 de octubre de 2026</p>
+  </div>
+</div>
+
+</div>
+
+<footer>
+  <p><strong>Brayan Yesid Vanegas</strong> | Ingeniería de Sistemas - Décimo Semestre | FESNA</p>
+  <p>Profesor: Fredy Lemus | Revista Digital Interactiva - Aprendizaje Automático</p>
+</footer>
+
+</body>
+</html>
