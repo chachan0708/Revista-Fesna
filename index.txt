@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Revista FESNA - Formulario</title>
+<style>
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body { font-family: 'Segoe UI', sans-serif; background: linear-gradient(135deg, #1a1a2e, #16213e); color: #fff; min-height: 100vh; display: flex; flex-direction: column; align-items: center; padding: 40px 20px; }
+header { text-align: center; margin-bottom: 40px; }
+h1 { font-size: 2.5rem; margin-bottom: 10px; color: #e94560; text-transform: uppercase; letter-spacing: 2px; }
+p.subtitle { color: #aaa; font-size: 1.1rem; }
+.form-container { background: rgba(255,255,255,0.05); border-radius: 15px; padding: 30px; box-shadow: 0 10px 30px rgba(0,0,0,0.5); width: 100%; max-width: 800px; border: 1px solid rgba(255,255,255,0.1); }
+iframe { width: 100%; border: none; border-radius: 10px; min-height: 900px; }
+footer { margin-top: 40px; color: #666; font-size: 0.9rem; }
+</style>
+</head>
+<body>
+<header>
+<h1>Revista FESNA</h1>
+<p class="subtitle">Formulario de inscripción / contacto</p>
+</header>
+<div class="form-container">
+<iframe src="https://docs.google.com/forms/d/e/1FAIpQLSeeiJ8x86-rbu6O1sX3-IHgDPIZb_nnX-O-vzKW37oCI1KCxA/viewform?embedded=true" width="100%" height="1000" frameborder="0" marginheight="0" marginwidth="0">Cargando formulario…</iframe>
+</div>
+<footer>© 2026 Revista FESNA - Todos los derechos reservados</footer>
+</body>
+</html>
